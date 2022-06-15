@@ -40,7 +40,7 @@ class _OrderPageState extends State<OrderPage> {
     );
   }
 
-  Widget orderDetail(){
+  Widget orderDetail() {
     return Container(
       height: 220.0,
       margin: EdgeInsets.only(top: 25.0, bottom: 16.0),
@@ -49,22 +49,22 @@ class _OrderPageState extends State<OrderPage> {
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget> [
+            children: <Widget>[
               Text(
-                "Card Total",
+                "Cart Total",
                 style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.bold
-                  ),
-                ),
-                Text("\u20B9 33.0",
+                    color: Colors.grey,
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "RM 33.0",
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 16.0,
                   fontWeight: FontWeight.bold,
                 ),
-                ),
+              ),
             ],
           ),
           SizedBox(
@@ -74,99 +74,98 @@ class _OrderPageState extends State<OrderPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                "Discount", 
+                "Discount",
                 style: TextStyle(
-                  color: Colors.grey, 
-                  fontSize: 16.0, 
+                  color: Colors.grey,
+                  fontSize: 16.0,
                   fontWeight: FontWeight.bold,
-                  ),
-                  ),
-                  Text(
-                    "2.0", 
-                    style: TextStyle(
-                      color: Colors.black, 
-                      fontSize: 16.0, 
-                      fontWeight: FontWeight.bold,
-                      ),
-                      ),
+                ),
+              ),
+              Text(
+                "2.0",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ],
           ),
           SizedBox(
             height: 13.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Text(
-                  "Tax",
-                  style: TextStyle(
-                    color: Colors.grey, 
-                    fontSize: 16.0, 
-                    fontWeight: FontWeight.bold,
-                    ),
-                    ),
-                    Text(
-                      "3.0",
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-              ],
-            ),
-            Divider(
-              height: 40.0,
-              color: Colors.white,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Text(
-                  "Sub Total",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  ),
-                  Text(
-                    "38.0",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-              ],
-            ),
-
-            SizedBox(
-              height: 24.0,
-            ),
-            InkWell(
-              onTap: (){
-                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)=>SignInPage()));
-              },
-              child: Container(
-                height: 50.0,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(30.0),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Text(
+                "Tax",
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
                 ),
-                child: Center(
-                  child: Text(
-                    "Proceed to Checkout",
-                    style: TextStyle(
+              ),
+              Text(
+                "3.0",
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+          Divider(
+            height: 40.0,
+            color: Colors.white,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Text(
+                "Sub Total",
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                "38.0",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 24.0,
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => SignInPage()));
+            },
+            child: Container(
+              height: 50.0,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(30.0),
+              ),
+              child: Center(
+                child: Text(
+                  "Proceed to Checkout",
+                  style: TextStyle(
                       color: Colors.white,
                       fontSize: 18.0,
-                      fontWeight: FontWeight.bold
-                    ),
-                  ),
+                      fontWeight: FontWeight.bold),
                 ),
-                ),
-            )
+              ),
+            ),
+          )
         ],
       ),
     );
