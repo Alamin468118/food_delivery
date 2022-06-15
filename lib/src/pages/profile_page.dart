@@ -1,7 +1,9 @@
+// ignore_for_file: library_private_types_in_public_api, sized_box_for_whitespace, sort_child_properties_last
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import '../widget/bottomSheetWidget.dart';
+// import '../widget/bottomSheetWidget.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -33,12 +35,12 @@ class _ProfilePageState extends State<ProfilePage> {
                       width: 150.0,
                       height: 150.0,
                       decoration: BoxDecoration(
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: AssetImage("assets/images/profile.jpeg"),
                           fit: BoxFit.cover,
                         ),
                         borderRadius: BorderRadius.circular(80.0),
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             blurRadius: 5.0,
                             color: Colors.black,
@@ -51,7 +53,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       bottom: 20.0,
                       right: 20.0,
                       child: InkWell(
-                        child: Icon(
+                        child: const Icon(
                           Icons.camera_alt,
                           color: Colors.white,
                           size: 28.0,
@@ -65,27 +67,27 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 18.0,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    SizedBox(
+                    const SizedBox(
                       width: 50.0,
                     ),
-                    Text(
+                    const Text(
                       "Robert Downey, Jr.",
                       style: TextStyle(
                         fontSize: 25.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10.0,
                     ),
                     InkWell(
-                      child: Icon(
+                      child: const Icon(
                         Icons.create,
                         size: 18.0,
                         color: Colors.blue,
@@ -94,16 +96,16 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10.0,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    SizedBox(
+                    const SizedBox(
                       width: 50.0,
                     ),
-                    Text(
+                    const Text(
                       "Actor and Producer",
                       style: TextStyle(
                         fontSize: 16.0,
@@ -111,11 +113,11 @@ class _ProfilePageState extends State<ProfilePage> {
                         color: Colors.grey,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10.0,
                     ),
                     InkWell(
-                      child: Icon(
+                      child: const Icon(
                         Icons.create,
                         size: 18.0,
                         color: Colors.blue,
@@ -124,7 +126,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ],
                 ),
-                Divider(
+                const Divider(
                   height: 30.0,
                   color: Colors.black,
                 ),
@@ -135,9 +137,10 @@ class _ProfilePageState extends State<ProfilePage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Column(
-                        children: <Widget>[
+                        children: const <Widget>[
                           Text(
                             "45",
+                            // ignore: prefer_const_constructors
                             style: TextStyle(
                               color: Colors.blueGrey,
                               fontSize: 22.0,
@@ -149,6 +152,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                           Text(
                             "Follower",
+                            // ignore: prefer_const_constructors
                             style: TextStyle(
                               color: Colors.blueGrey,
                               fontSize: 16.0,
@@ -157,12 +161,12 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                         ],
                       ),
-                      VerticalDivider(
+                      const VerticalDivider(
                         width: 70.0,
                         color: Colors.black,
                       ),
                       Column(
-                        children: <Widget>[
+                        children: const <Widget>[
                           Text(
                             "20",
                             style: TextStyle(
@@ -184,12 +188,12 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                         ],
                       ),
-                      VerticalDivider(
+                      const VerticalDivider(
                         width: 70.0,
                         color: Colors.black,
                       ),
                       Column(
-                        children: <Widget>[
+                        children: const <Widget>[
                           Text(
                             "30",
                             style: TextStyle(
@@ -214,7 +218,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ],
                   ),
                 ),
-                Divider(
+                const Divider(
                   height: 20.0,
                   color: Colors.black,
                 ),
@@ -224,13 +228,13 @@ class _ProfilePageState extends State<ProfilePage> {
                   height: 130.0,
                   child: Card(
                     // color: Colors.amber,
-                    margin: EdgeInsets.symmetric(horizontal: 10.0),
+                    margin: const EdgeInsets.symmetric(horizontal: 10.0),
                     elevation: 5.0,
                     child: Padding(
                       padding: const EdgeInsets.all(20.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
+                        children: const <Widget>[
                           Text(
                             "About",
                             style: TextStyle(

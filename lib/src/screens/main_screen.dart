@@ -3,10 +3,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../pages/homePage.dart';
+import '../pages/home_page.dart';
 
-import '../pages/orderPage.dart';
-import '../pages/profilePage.dart';
+import '../pages/order_page.dart';
+import '../pages/profile_page.dart';
 
 class MainScreen extends StatefulWidget {
   @override

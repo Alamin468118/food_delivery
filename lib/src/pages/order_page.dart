@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-import '../widget/orderCard.dart';
-import 'signInPage.dart';
+import '../widget/order_card.dart';
+import 'sign_in_page.dart';
 
 class OrderPage extends StatefulWidget {
   const OrderPage({Key? key}) : super(key: key);
@@ -49,6 +49,7 @@ class _OrderPageState extends State<OrderPage> {
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // ignore: prefer_const_literals_to_create_immutables
             children: <Widget>[
               Text(
                 "Cart Total",
@@ -72,7 +73,7 @@ class _OrderPageState extends State<OrderPage> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
+            children: const <Widget>[
               Text(
                 "Discount",
                 style: TextStyle(
@@ -96,7 +97,7 @@ class _OrderPageState extends State<OrderPage> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
+            children: const <Widget>[
               Text(
                 "Tax",
                 style: TextStyle(
@@ -121,7 +122,7 @@ class _OrderPageState extends State<OrderPage> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
+            children: const <Widget>[
               Text(
                 "Sub Total",
                 style: TextStyle(

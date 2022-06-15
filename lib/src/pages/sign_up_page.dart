@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 
-import 'signUpPage.dart';
 
-class SignInPage extends StatefulWidget {
+import 'sign_in_page.dart';
+
+
+class SignUpPage extends StatefulWidget {
   @override
-  _SignInPageState createState() => _SignInPageState();
+  _SignUpPageState createState() => _SignUpPageState();
 }
 
-class _SignInPageState extends State<SignInPage> {
+class _SignUpPageState extends State<SignUpPage> {
   Widget _buildTextEmail() {
     return TextFormField(
-      decoration: InputDecoration(
-        hintText: "Email or Username",
+      decoration: const InputDecoration(
+        hintText: "Email",
         hintStyle: TextStyle(
           color: Color(0xFFBDC2CB),
           fontSize: 18.0,
@@ -20,22 +22,37 @@ class _SignInPageState extends State<SignInPage> {
     );
   }
 
-  bool _passVis = true;
+  Widget _buildTextUser() {
+    return TextFormField(
+      decoration: const InputDecoration(
+        hintText: "Username",
+        hintStyle: TextStyle(
+          color: Color(0xFFBDC2CB),
+          fontSize: 18.0,
+        ),
+      ),
+    );
+  }
+  bool _passVis=true;
+  bool _passVisConf=true;
 
   Widget _buildTextPass() {
     return TextFormField(
       decoration: InputDecoration(
         hintText: "Password",
-        hintStyle: TextStyle(
+        hintStyle: const TextStyle(
           color: Color(0xFFBDC2CB),
           fontSize: 18.0,
         ),
         suffixIcon: IconButton(
-          icon: _passVis ? Icon(Icons.visibility_off) : Icon(Icons.visibility),
-          onPressed: () {
+          icon:_passVis? const Icon(Icons.visibility_off):const Icon(Icons.visibility),
+          onPressed: ()
+          {
             setState(() {
-              _passVis = !_passVis;
+              _passVis=!_passVis;
+             
             });
+
           },
         ),
       ),
@@ -43,54 +60,72 @@ class _SignInPageState extends State<SignInPage> {
     );
   }
 
+  Widget _buildTextPassConf() {
+    return TextFormField(
+      decoration: InputDecoration(
+        hintText: "Confirm Password",
+        hintStyle: const TextStyle(
+          color: Color(0xFFBDC2CB),
+          fontSize: 18.0,
+        ),
+        suffixIcon: IconButton(
+          icon:_passVisConf? const Icon(Icons.visibility_off):const Icon(Icons.visibility),
+          onPressed: ()
+          {
+            setState(() {
+              _passVisConf=!_passVisConf;
+             
+            });
+
+          },
+        ),
+      ),
+      obscureText: _passVisConf,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: SingleChildScrollView(
-        child: Padding(
-          padding:
-              const EdgeInsets.symmetric(horizontal: 30.0, vertical: 100.0),
+              child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30.0,vertical: 100.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
-                "Sign In",
+              const Text(
+                "Sign Up",
                 style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
               ),
-              SizedBox(
-                height: 90.0,
+              const SizedBox(
+                height: 50.0,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  Text(
-                    "Forgot Password ?",
-                    style: TextStyle(
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18.0),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 10.0,
-              ),
+              
               Card(
                 elevation: 5.0,
                 child: Padding(
-                  padding: EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(20.0),
                   child: Column(
                     children: <Widget>[
-                      _buildTextEmail(),
-                      SizedBox(
+                      _buildTextUser(),
+                      const SizedBox(
+                        height: 20.0,
+                      ),
+                       _buildTextEmail(),
+                      const SizedBox(
                         height: 20.0,
                       ),
                       _buildTextPass(),
+                      const SizedBox(
+                        height: 20.0,
+                      ),
+                      _buildTextPassConf(),
                     ],
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30.0,
               ),
               Container(
@@ -99,9 +134,9 @@ class _SignInPageState extends State<SignInPage> {
                   borderRadius: BorderRadius.circular(35.0),
                   color: Colors.blue,
                 ),
-                child: Center(
+                child: const Center(
                   child: Text(
-                    "Sign In",
+                    "Sign Up",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 18.0,
@@ -110,30 +145,30 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                 ),
               ),
-              Divider(
+              const Divider(
                 height: 20.0,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text(
-                    "Don't have an account?",
+                  const Text(
+                    "Already have an account?",
                     style: TextStyle(
                       color: Color(0xFFBDC2CB),
                       fontSize: 17.0,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10.0,
                   ),
                   InkWell(
-                    onTap: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (BuildContext context) => SignUpPage()));
+                    onTap: ()
+                    {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context)=>const SignInPage()));
                     },
-                    child: Text(
-                      "Sign up",
+                    child: const Text(
+                      "Sign In",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.blueAccent,

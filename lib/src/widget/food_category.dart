@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../data/categoryData.dart';
+import '../data/category_data.dart';
 import '../models/categoryModel.dart';
-import 'foodCard.dart';
+import 'food_card.dart';
 
 class FoodCategory extends StatelessWidget {
   final List<Category> _categories = categories;

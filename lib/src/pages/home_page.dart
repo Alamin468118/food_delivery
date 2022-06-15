@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery/src/data/foodData.dart';
+import 'package:food_delivery/src/data/food_data.dart';
 import 'package:food_delivery/src/models/foodModel.dart';
 
-import '../widget/foodBought.dart';
-import '../widget/foodCategory.dart';
-import '../widget/homeTopWidget.dart';
-import '../widget/searchBar.dart';
+import '../widget/food_bought.dart';
+import '../widget/food_category.dart';
+import '../widget/home_top_widget.dart';
+import '../widget/search_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
